@@ -58,3 +58,8 @@ export class ServiceNameServiceService { }
 ## Template Syntax
 
 ## What is diff btwn JS module and ngModule
+
+## 3rd PARTY LIBRARY
+- ngx-spinner
+- ngx-cropper
+- quill
