@@ -235,4 +235,6 @@ INDEX - Used to create and retrieve data from the database very quickly
 - specialization
 - generalization
 - transactions problems (concurrency)
+- normalization
+- aggregation
 - 
