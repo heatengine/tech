@@ -16,3 +16,14 @@
 - ts-node
 - bcrypt
 - passport
+
+## TODO
+- rxjs
+- package 'q'
+- package 'bluebired'
+- package 'request-promise'
+- package 'cluster'
+- package 'morgan'
+- package 'process'
+- webpack
+- OAuth
