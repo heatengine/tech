@@ -1,0 +1,21 @@
+- data structures and it's variations
+    - array
+    - linked list
+    - graph
+    - map
+    - set
+    - operations in all the DS
+        - search
+        - sort
+        - insert
+        - delete
+        - update 
+- Algorithms
+- OOP - Object Oriented Programming
+    -
+- Database
+    - SQL
+- OS
+    - Linux
+    - basic/fundamentals of OS
+- version control tool (git)

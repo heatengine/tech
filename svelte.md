@@ -42,7 +42,7 @@ $:
 ## Looping in HTML
 
 ```
-    {#each cats as cat}
+    {#each cats as cat, index} <!-- With index -->
 		{cat.name}
 	{/each}
 ```
@@ -103,7 +103,7 @@ function sayHello() {
 **/
 ```
 
-- for nested components checkout (this)[https://svelte.dev/tutorial/event-forwarding]
+- for nested components checkout [this](https://svelte.dev/tutorial/event-forwarding)
 
 ## Bind in inputs
 
@@ -234,6 +234,8 @@ function fade(node, {
 
 ## Actions
 ### the `use` derective
+- Actions are essentially element-level lifecycle functions.
+
 - It can be better understood by (this)[https://svelte.dev/tutorial/actions] example.
 
 ## Classes
@@ -353,3 +355,39 @@ function fade(node, {
 - `sveltekit:start` — fired once the app has hydrated
 - `sveltekit:navigation-start` — navigation has started
 - `sveltekit:navigation-end` — navigation has ended
+
+
+# Render HTML from variables
+## {@html <html as variable or string>}
+```
+{@html '<strong>Svelte is cool</strong>'}
+```
+
+# Reactivity
+## Reactivity Statements
+```
+  // following condition is evaluated every-time the dependent property is updated
+  $: if (count >= 10) {
+    alert('count is dangerously high!')
+    count = 9
+  }
+```
+## Reactivity Expressions
+```
+  let number = 1;
+  // following property is evaluated every-time the dependent property is updated
+  $: square = number * number;
+```
+
+# Getting reference of a component in an `#each` block
+```
+<ChildComponent bind:this={<any var/array/obj to bind with>} />
+```
+
+# Rest Props - `$$restProps`
+- `$$restProps` contains only the props which are not declared with `export`. It can be used to pass down other unknown attributes to an element in a component. It shares the same optimisation problems as $$props, and is likewise not recommended.
+
+# Variables not values
+- Svelte only care about the reassignment of the variables not the values it refers to.
+- For more [click here](https://sveltesociety.dev/recipes/svelte-language-fundamentals/reactivity/)
+
